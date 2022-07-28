@@ -7,3 +7,8 @@ export default {
   name: 'LandingPage',
 }
 </script>
+
+<style lang="scss" scoped>
+.landing-page {
+}
+</style>
