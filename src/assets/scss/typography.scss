@@ -1,0 +1,12 @@
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-roboto-cond-regular);
+}
+
+a[href] {
+  text-decoration: none;
+  color: var(--color-midgreen);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
