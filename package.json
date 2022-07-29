@@ -13,7 +13,7 @@
     "storybook": "start-storybook -p 6006",
     "sb": "yarn storybook",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=34b096f374de",
+    "chromatic": "npx chromatic --project-token=4485561e6573",
     "postinstall": "yarn run build"
   },
   "dependencies": {
