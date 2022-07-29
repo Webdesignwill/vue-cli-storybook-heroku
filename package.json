@@ -17,6 +17,7 @@
     "postinstall": "yarn run build"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "bootstrap": "5.2.0",
     "core-js": "^3.8.3",
     "express": "^4.18.1",
@@ -44,6 +45,7 @@
     "@vue/cli-service": "~5.0.0",
     "@vue/test-utils": "^2.0.0-0",
     "@vue/vue3-jest": "^27.0.0-alpha.1",
+    "autoprefixer": "^10.4.7",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.5",
     "chromatic": "^6.7.0",

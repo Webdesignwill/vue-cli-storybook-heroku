@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import LandingPage from '@/views/LandingPage.vue'
+import LandingPage from '@/views/Landing'
 
 const routes = [
   {

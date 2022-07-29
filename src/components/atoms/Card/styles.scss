@@ -1,0 +1,45 @@
+.card {
+  --card-width: 250px;
+  --card-height: calc(var(--card-width) / (16/9));
+  --grow-factor: 1.5;
+
+  cursor: pointer;
+  position: relative;
+  $self: &;
+  background-color: red;
+  width: var(--card-width);
+  height: var(--card-height);
+  transition: all var(--transition-speed);
+  transform-origin: center center;
+
+  &:not(:last-child) {
+    margin-right: var(--spacing-3);
+  }
+
+  &:last-child {
+    transform-origin: center right;
+  }
+
+  &:first-child {
+    transform-origin: center left;
+  }
+
+  &--overlay {
+    transition: opacity var(--transition-speed-slow);
+    opacity: 0;
+    padding: var(--spacing-3);
+
+    &-description {
+      font-size: var(--font-size-xs);
+    }
+  }
+
+  &:hover {
+    z-index: var(--zindex-top);
+    transform: scale(var(--grow-factor));
+
+    #{ $self }--overlay {
+      opacity: 1;
+    }
+  }
+}

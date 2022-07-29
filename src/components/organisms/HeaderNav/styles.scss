@@ -1,0 +1,13 @@
+.header-nav {
+  z-index: var(--zindex-header-nav);
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+
+  &--inner {
+    padding: 20px var(--spacing-5);
+    min-width: var(--breakpoint-tablet);
+    display: flex;
+  }
+}

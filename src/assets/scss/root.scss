@@ -1,4 +1,7 @@
 :root {
+  --transition-speed: 0.3s;
+  --transition-speed-slow: 0.8s;
+  
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
   --spacing-3: 1rem;
@@ -8,14 +11,12 @@
 
   --body-font-size: 1rem;
 
-  --font-size-xxs: calc(var(--body-font-size) * 0.95);
-  --font-size-xs: --body-font-size;
-  --font-size-s: calc(var(--body-font-size) * 1.1);
-  --font-size-sm: calc(var(--body-font-size) * 1.375);
-  --font-size-md: calc(var(--body-font-size) * 1.75);
-  --font-size-lg: calc(var(--body-font-size) * 2);
-  --font-size-xl: calc(var(--body-font-size) * 2.375);
-  --font-size-xxl: calc(var(--body-font-size) * 3.6);
+  --font-size-xs: calc(var(--body-font-size) * 0.75);
+  --font-size-sm: calc(var(--body-font-size) * 0.95);
+  --font-size-md: --body-font-size;
+  --font-size-lg: calc(var(--body-font-size) * 1.1);
+  --font-size-xl: calc(var(--body-font-size) * 1.375);
+  --font-size-xxl: calc(var(--body-font-size) * 1.75);
 
   --font-roboto-bold: Roboto-Bold, Arial, Helvetica, sans-serif;
   --font-roboto-italic: Roboto-Italic, Arial, Helvetica, sans-serif;
@@ -25,11 +26,20 @@
   --font-roboto-cond-light: RobotoCondensed-Light, Arial, Helvetica, sans-serif;
   --font-roboto-cond-regular: RobotoCondensed-Regular, Arial, Helvetica, sans-serif;
 
+  --color-black: #000000;
+  --color-white: #FFFFFF;
   --color-abn-darkgrey: #222222;
+  --color-abn-logo-grey: #868686;
   --color-abn-grey: #666666;
   --color-abn-darkgreen: #004D41;
   --color-abn-midgreen: #007066;
   --color-abn-lightgreen: #00AB95;
   --color-abn-darkyellow: #BD960B;
   --color-abn-lightyellow: #E5B50A;
+
+  --breakpoint-desktop: 1200px;
+  --breakpoint-tablet: 992px;
+  --breakpoint-mobile: 576px;
+
+  --zindex-top: 1000;
 }

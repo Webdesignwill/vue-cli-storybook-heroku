@@ -1,0 +1,9 @@
+.abn-logo {
+  transition: color var(--transition-speed);
+  color: var(--color-abn-logo-grey);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-white);
+  }
+}

@@ -1,9 +1,8 @@
 import { createStore } from 'vuex'
+import ScheduleModule from './schedule.module.js'
 
 export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  modules: {
+    schedule: ScheduleModule,
+  },
 })
