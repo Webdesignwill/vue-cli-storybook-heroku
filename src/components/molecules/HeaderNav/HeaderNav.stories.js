@@ -2,7 +2,7 @@ import vueRouter from 'storybook-vue3-router'
 import HeaderNav from '.'
 
 export default {
-  title: 'Organisms/HeaderNav',
+  title: 'Molecules/HeaderNav',
   component: HeaderNav,
   parameters: {
     layout: 'fullscreen',

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import HeaderNav from '@/components/organisms/HeaderNav'
+import HeaderNav from '@/components/molecules/HeaderNav'
 export default {
   components: {
     HeaderNav,

@@ -1,0 +1,14 @@
+.featured {
+  display: flex;
+  min-height: 50vh;
+
+  &--preview {
+    background-color: var(--color-abn-lightgreen);
+    flex-basis: 60%;
+  }
+
+  &--content {
+    padding: var(--spacing-4);
+    flex: 1;
+  }
+}

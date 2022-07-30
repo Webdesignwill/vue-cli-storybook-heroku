@@ -1,19 +1,19 @@
-import Cards from '.'
+import Loading from '.'
 
 export default {
-  title: 'Molecules/Cards',
-  component: Cards,
+  title: 'Atoms/Loading',
+  component: Loading,
   parameters: {
     layout: 'centered',
   },
 }
 
 const Template = (args) => ({
-  components: { Cards },
+  components: { Loading },
   setup() {
     return { args }
   },
-  template: `<Cards />`,
+  template: `<Loading />`,
 })
 
 export const Default = Template.bind({})
