@@ -5,7 +5,7 @@
       placeholder="Search titles"
       class="search--input"
       ref="search"
-      type="search"
+      type="text"
     />
   </div>
 </template>
@@ -21,7 +21,9 @@ export default {
     handleKeyUp() {
       const { value } = this.$refs.search
       const action = !value.length ? 'FETCH' : 'SEARCH'
-      this.$store.dispatch(`schedule/${action}`, value)
+      this.$store.commit('search/SET_QUERY', value)
+
+      this.$store.dispatch(`schedule/${action}`)
     },
   },
 }
