@@ -16,10 +16,8 @@
 
     <article class="card--overlay">
       <h4 class="card--overlay-title">{{ show.name }}</h4>
-      <p
-        class="card--overlay-description"
-        v-html="sanitizeHtml(show.summary)"
-      />
+      <div class="card--overlay-html" v-html="sanitizeHtml(show.summary)" />
+
       <Genres :genres="show.genres" />
     </article>
   </div>

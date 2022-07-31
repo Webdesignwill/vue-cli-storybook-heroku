@@ -16,7 +16,10 @@
     <div class="featured--content">
       <div class="featured--content-inner">
         <h2>{{ show.name }}</h2>
-        <p v-html="sanitizeHtml(show.summary)" />
+        <div
+          class="featured--content-html"
+          v-html="sanitizeHtml(show.summary)"
+        />
 
         <div class="featured--content-row">
           <Button :style="`primary`">Watch {{ show.name }} now</Button>

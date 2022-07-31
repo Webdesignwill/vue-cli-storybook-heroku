@@ -63,8 +63,11 @@
     opacity: 0;
     padding: var(--spacing-3);
 
-    &-description {
+    &-html {
       font-size: var(--font-size-xs);
+      max-height: 200px;
+      margin-bottom: var(--spacing-3);
+      overflow-y: scroll;
     }
   }
 
