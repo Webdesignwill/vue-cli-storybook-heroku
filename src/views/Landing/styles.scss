@@ -1,1 +1,8 @@
-.landing-page {}
+.landing-page {
+  padding: var(--spacing-3);
+  
+  @include media-breakpoint-up(lg) {
+    min-width: var(--breakpoint-tablet);
+    padding: var(--spacing-5);
+  }
+}

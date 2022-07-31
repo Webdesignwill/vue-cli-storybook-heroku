@@ -20,6 +20,7 @@
         class="card--overlay-description"
         v-html="sanitizeHtml(show.summary)"
       />
+      <Genres :genres="show.genres" />
     </article>
   </div>
 </template>
@@ -27,10 +28,12 @@
 <script>
 import sanitizeHtml from 'sanitize-html'
 import ShieldIcon from '@/components/atoms/ShieldIcon'
+import Genres from '@/components/atoms/Genres'
 
 export default {
   components: {
     ShieldIcon,
+    Genres,
   },
   props: {
     show: {

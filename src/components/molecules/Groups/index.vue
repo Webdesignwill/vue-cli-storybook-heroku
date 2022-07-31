@@ -1,6 +1,6 @@
 <template>
   <section class="groups">
-    <header>
+    <header class="groups--header">
       <h3>{{ group.title }}</h3>
     </header>
     <div class="groups--inner">
