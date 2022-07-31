@@ -13,7 +13,7 @@ const Template = (args) => ({
   setup() {
     return { args }
   },
-  template: `<Button type="button" :style="args.style" :disabled="args.disabled">ABN Button</RGButton>`,
+  template: `<Button type="button" :style="args.style" :disabled="args.disabled">ABN Button</Button>`,
 })
 
 export const Default = Template.bind({})
