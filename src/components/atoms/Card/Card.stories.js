@@ -1,3 +1,5 @@
+import vueRouter from 'storybook-vue3-router'
+import routes from '@/router/routes'
 import Card from '.'
 
 export default {
@@ -19,9 +21,39 @@ const Template = (args) => ({
 export const Default = Template.bind({})
 Default.args = {
   show: {
-    name: 'Storybook',
+    id: 56139,
+    url: 'https://www.tvmaze.com/shows/56139/meta-runner',
+    name: 'Meta Runner',
+    type: 'Animation',
+    language: 'English',
+    genres: [],
+    status: 'Running',
+    runtime: 15,
+    averageRuntime: 15,
+    premiered: '2019-07-25',
+    ended: null,
+    officialSite: 'https://youtube.com/channel/UCn_FAXem2-e3HQvmK-mOH4g',
+    schedule: { time: '', days: ['Friday'] },
+    rating: { average: null },
+    weight: 51,
+    network: null,
+    webChannel: {
+      id: 21,
+      name: 'YouTube',
+      country: null,
+      officialSite: 'https://www.youtube.com',
+    },
+    dvdCountry: null,
+    externals: { tvrage: null, thetvdb: 367418, imdb: 'tt10695770' },
+    image: null,
     summary:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus tempor quam, a feugiat elit ultrices quis. Suspendisse nunc libero, dictum sed aliquet sit amet, posuere posuere eros. Pellentesque eleifend odio in vehicula tempus. Mauris pulvinar nunc varius, blandit quam at, pharetra ipsum. Cras eget maximus neque, sed posuere massa. Duis blandit sed tellus quis pulvinar. Fusce posuere tincidunt sem, quis pretium eros maximus ac. Nullam iaculis est eu aliquet placerat. Vivamus at lorem commodo, volutpat enim eu, consectetur nunc.',
+      '<p><b>Meta Runner</b> is an Australian computer animated web television series created and developed by Glitch Productions</p>',
+    updated: 1658668666,
+    _links: {
+      self: { href: 'https://api.tvmaze.com/shows/56139' },
+      previousepisode: { href: 'https://api.tvmaze.com/episodes/2354249' },
+      nextepisode: { href: 'https://api.tvmaze.com/episodes/2354250' },
+    },
   },
 }
 
@@ -35,3 +67,6 @@ WithImage.args = {
     },
   },
 }
+
+Default.decorators = [vueRouter(routes)]
+WithImage.decorators = [vueRouter(routes)]
