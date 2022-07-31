@@ -12,8 +12,10 @@ export default {
 
   mutations: {
     SET_GROUPS(state, data) {
-      state.groups = data.reduce((accumulator, current) => {
-        const { type } = current._embedded.show
+      const newThing = data.reduce((accumulator, current) => {
+        const show = current.show || current._embedded.show
+
+        const { type } = show
         const formattedType = type.replace(/\s/g, '-').toLowerCase()
 
         if (accumulator[formattedType]) {
@@ -21,22 +23,21 @@ export default {
             ...accumulator,
             [formattedType]: {
               ...accumulator[formattedType],
-              shows: [
-                ...accumulator[formattedType].shows,
-                current._embedded.show,
-              ],
+              shows: [...accumulator[formattedType].shows, show],
             },
           }
         } else {
           return {
             ...accumulator,
             [formattedType]: {
-              shows: [current._embedded.show],
+              shows: [show],
               title: type,
             },
           }
         }
       }, {})
+
+      state.groups = newThing
     },
 
     SET_FEATURED(state) {
@@ -54,6 +55,22 @@ export default {
   },
 
   actions: {
+    SEARCH({ commit }, query) {
+      commit('SET_ERROR_STATE', false)
+      commit('SET_FETCHING_STATE', true)
+
+      axios
+        .get(`/search/shows?q=${query}`)
+        .then((res) => {
+          commit('SET_GROUPS', res.data)
+          commit('SET_FEATURED')
+          commit('SET_FETCHING_STATE', false)
+        })
+        .catch(() => {
+          commit('SET_FETCHING_STATE', false)
+          commit('SET_ERROR_STATE', true)
+        })
+    },
     FETCH({ commit }) {
       commit('SET_ERROR_STATE', false)
       commit('SET_FETCHING_STATE', true)

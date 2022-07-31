@@ -2,18 +2,22 @@
   <div class="header-nav">
     <div class="header-nav--inner">
       <router-link to="/">
-        <Logo class="header-nav--logo" />
+        <Logo />
       </router-link>
+
+      <Search class="header-nav--search" />
     </div>
   </div>
 </template>
 
 <script>
 import Logo from '@/components/atoms/Logo'
+import Search from '@/components/atoms/Search'
 
 export default {
   components: {
     Logo,
+    Search,
   },
 }
 </script>
