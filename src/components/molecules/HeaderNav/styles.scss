@@ -3,8 +3,23 @@
   align-items: center;
 
   &--inner {
-    padding: 20px var(--spacing-5);
-    min-width: var(--breakpoint-tablet);
+    padding: 20px var(--spacing-3) 0 var(--spacing-3);
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-up(lg) {
+      padding: 20px var(--spacing-5);
+    }
+  }
+
+  &--search {
+    flex-basis: 80%;
+    margin-left: var(--spacing-3);
+
+    @include media-breakpoint-up(lg) {
+      flex-basis: 50%;
+      margin-left: initial;
+    }
   }
 }
