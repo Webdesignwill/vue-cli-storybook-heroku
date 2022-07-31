@@ -37,6 +37,14 @@
       position: relative;
     }
 
+    &-html {
+      @include media-breakpoint-down(lg) {
+        max-height: 200px;
+        margin-bottom: var(--spacing-3);
+        overflow-y: scroll;
+      }
+    }
+
     &::after {
       content: "";
       z-index: var(--zindex-screen);

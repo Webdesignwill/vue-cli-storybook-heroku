@@ -1,7 +1,7 @@
 <template>
   <section class="groups">
     <header class="groups--header">
-      <h3>{{ group.title }}</h3>
+      <h3>{{ group.title }} ({{ group.shows.length }})</h3>
     </header>
     <div class="groups--inner">
       <Card v-for="(show, index) in group.shows" :key="index" :show="show" />
