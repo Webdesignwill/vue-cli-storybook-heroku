@@ -66,9 +66,27 @@
     opacity: 0;
     padding: var(--spacing-3);
 
+    &-meta {
+      margin-bottom: var(--spacing-3);
+    }
+
+    &-language {
+      display: block;
+      color: var(--color-abn-lightgreen);
+      margin-bottom: var(--spacing-1);
+    }
+
+    &-rating {
+      font-size: var(--font-size-xs);
+    }
+
+    &-title {
+      margin-bottom: 0;
+    }
+
     &-html {
       font-size: var(--font-size-xs);
-      max-height: 250px;
+      max-height: 220px;
       margin-bottom: var(--spacing-3);
       overflow-y: scroll;
     }

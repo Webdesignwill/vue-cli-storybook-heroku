@@ -4,7 +4,7 @@ body, html {
   color: var(--color-white);
   font-family: var(--font-roboto-regular);
   font-size: var(--body-font-size);
-  background-color: var(--color-abn-darkgrey);
+  background-color: var(--color-black);
   overflow-x: hidden;
   scroll-behavior: smooth;
 
@@ -15,7 +15,3 @@ body, html {
 * {
   outline: none;
 }
-
-// ::-webkit-scrollbar {
-//   display: none;
-// }

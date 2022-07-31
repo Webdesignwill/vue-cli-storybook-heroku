@@ -4,12 +4,12 @@ export default {
   namespaced: true,
 
   state: {
-    show: {},
+    data: {},
   },
 
   mutations: {
-    SET_SHOW(state, boolean) {
-      state.fetching = boolean
+    SET_SHOW(state, data) {
+      state.data = data
     },
 
     SET_FETCHING_STATE(state, boolean) {
@@ -29,7 +29,6 @@ export default {
       axios
         .get(`/lookup/shows?imdb=${id}`)
         .then((res) => {
-          console.log(res)
           commit('SET_SHOW', res.data)
           commit('SET_FETCHING_STATE', false)
         })

@@ -15,14 +15,18 @@
 
     <div class="featured--content">
       <div class="featured--content-inner">
-        <h2>{{ show.name }}</h2>
+        <h2 class="featured--content-title">{{ show.name }}</h2>
+        <small class="featured--content-language">{{ show.language }}</small>
+        <h4>Rating {{ show.rating.average }}</h4>
         <div
           class="featured--content-html"
           v-html="sanitizeHtml(show.summary)"
         />
 
         <div class="featured--content-row">
-          <Button :style="`primary`">Watch {{ show.name }} now</Button>
+          <router-link :to="`/show/${show.externals.imdb}`">
+            <Button :style="`secondary`">More Info</Button>
+          </router-link>
         </div>
 
         <Genres :genres="show.genres" />
