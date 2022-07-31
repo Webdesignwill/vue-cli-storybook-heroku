@@ -1,8 +1,9 @@
 <template>
   <div class="header-nav">
     <div class="header-nav--inner">
-      <router-link to="/">
+      <router-link to="/" class="header-nav--link">
         <Logo />
+        <small class="header-nav--strap">@ THE MOVIES</small>
       </router-link>
 
       <Search class="header-nav--search" />

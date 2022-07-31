@@ -37,6 +37,16 @@
       position: relative;
     }
 
+    &-title {
+      margin-bottom: 0;
+    }
+
+    &-language {
+      display: block;
+      color: var(--color-abn-lightgreen);
+      margin-bottom: var(--spacing-3);
+    }
+
     &-html {
       @include media-breakpoint-down(lg) {
         max-height: 200px;

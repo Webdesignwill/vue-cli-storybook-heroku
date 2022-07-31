@@ -18,6 +18,12 @@
       <article class="card--overlay">
         <div>
           <h4 class="card--overlay-title">{{ show.name }}</h4>
+          <div class="card--overlay-meta">
+            <small class="card--overlay-language">{{ show.language }}</small>
+            <p class="card--overlay-rating" v-if="show.rating.average">
+              Rating {{ show.rating.average }}
+            </p>
+          </div>
           <div class="card--overlay-html" v-html="sanitizeHtml(show.summary)" />
         </div>
 

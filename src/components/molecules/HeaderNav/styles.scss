@@ -1,9 +1,28 @@
 .header-nav {
   display: flex;
   align-items: center;
+  height: var(--header-nav-height);
+
+  &--link {
+    position: relative;
+  }
+
+  &--strap {
+    font-family: var(--font-roboto-cond-regular);
+    color: var(--color-abn-lightyellow);
+    transform: rotate(4deg);
+    display: none;
+    position: absolute;
+    bottom: -2px;
+    left: 24%;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
 
   &--inner {
-    padding: 20px var(--spacing-3) 0 var(--spacing-3);
+    padding: 20px var(--spacing-3);
     width: 100%;
     display: flex;
     justify-content: space-between;
