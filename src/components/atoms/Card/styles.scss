@@ -58,14 +58,17 @@
   }
 
   &--overlay {
-    @include fit;    
+    @include fit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: opacity var(--transition-speed-slow);
     opacity: 0;
     padding: var(--spacing-3);
 
     &-html {
       font-size: var(--font-size-xs);
-      max-height: 200px;
+      max-height: 250px;
       margin-bottom: var(--spacing-3);
       overflow-y: scroll;
     }

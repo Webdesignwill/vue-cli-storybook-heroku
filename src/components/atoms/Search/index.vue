@@ -23,7 +23,7 @@ export default {
       const action = !value.length ? 'FETCH' : 'SEARCH'
       this.$store.commit('search/SET_QUERY', value)
 
-      this.$store.dispatch(`schedule/${action}`)
+      this.$store.dispatch(`shows/${action}`)
     },
   },
 }

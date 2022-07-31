@@ -26,14 +26,14 @@ export default {
     NoResults,
   },
   computed: mapState({
-    error: (state) => state.schedule.error,
-    fetching: (state) => state.schedule.fetching,
-    groups: (state) => state.schedule.groups,
-    featured: (state) => state.schedule.featured,
-    noResults: (state) => state.schedule.noResults,
+    error: (state) => state.shows.error,
+    fetching: (state) => state.shows.fetching,
+    groups: (state) => state.shows.groups,
+    featured: (state) => state.shows.featured,
+    noResults: (state) => state.shows.noResults,
   }),
   created() {
-    this.$store.dispatch('schedule/FETCH')
+    this.$store.dispatch('shows/FETCH')
   },
 }
 </script>

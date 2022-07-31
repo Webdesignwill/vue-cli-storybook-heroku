@@ -18,7 +18,7 @@ export default {
 
     SET_GROUPS(state, data) {
       const newThing = data.reduce((accumulator, current) => {
-        const show = current.show || current._embedded.show
+        const show = current.show || current
 
         const { type } = show
         const formattedType = type.replace(/\s/g, '-').toLowerCase()
@@ -92,7 +92,7 @@ export default {
       commit('SET_FETCHING_STATE', true)
 
       axios
-        .get('/schedule/web?date=2022-07-29&country=')
+        .get('/shows')
         .then((res) => {
           if (res.data.length) {
             commit('SET_GROUPS', res.data)

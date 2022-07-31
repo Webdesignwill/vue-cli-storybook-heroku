@@ -1,25 +1,29 @@
 <template>
   <div class="card">
-    <div class="card--preview" v-if="show.image">
-      <img
-        :src="show.image.medium"
-        :title="show.name"
-        class="card--preview-img"
-      />
-    </div>
-    <div v-else class="card--no-image">
-      <p class="card--no-image-text">No Preview Image</p>
-      <ShieldIcon />
-    </div>
+    <router-link :to="`/show/${show.externals.imdb}`">
+      <div class="card--preview" v-if="show.image">
+        <img
+          :src="show.image.medium"
+          :title="show.name"
+          class="card--preview-img"
+        />
+      </div>
+      <div v-else class="card--no-image">
+        <p class="card--no-image-text">{{ show.name }}</p>
+        <ShieldIcon />
+      </div>
 
-    <div class="card--screen" />
+      <div class="card--screen" />
 
-    <article class="card--overlay">
-      <h4 class="card--overlay-title">{{ show.name }}</h4>
-      <div class="card--overlay-html" v-html="sanitizeHtml(show.summary)" />
+      <article class="card--overlay">
+        <div>
+          <h4 class="card--overlay-title">{{ show.name }}</h4>
+          <div class="card--overlay-html" v-html="sanitizeHtml(show.summary)" />
+        </div>
 
-      <Genres :genres="show.genres" />
-    </article>
+        <Genres :genres="show.genres" />
+      </article>
+    </router-link>
   </div>
 </template>
 
