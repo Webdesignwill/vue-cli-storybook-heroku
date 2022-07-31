@@ -3,7 +3,7 @@
     <Loading v-if="fetching" />
 
     <template v-else>
-      <Featured />
+      <Featured :show="featured" />
       <Groups v-for="(group, index) in groups" :key="index" :group="group" />
     </template>
   </div>
@@ -26,6 +26,7 @@ export default {
     error: (state) => state.schedule.error,
     fetching: (state) => state.schedule.fetching,
     groups: (state) => state.schedule.groups,
+    featured: (state) => state.schedule.featured,
   }),
   created() {
     this.$store.dispatch('schedule/FETCH')

@@ -6,6 +6,7 @@ body, html {
   font-size: var(--body-font-size);
   background-color: var(--color-abn-darkgrey);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 * {

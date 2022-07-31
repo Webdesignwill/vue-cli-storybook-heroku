@@ -1,0 +1,45 @@
+@use "sass:color";
+
+.button {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-quicksand-regular);
+  white-space: nowrap;
+  padding: 0 var(--spacing-4);
+  color: var(--color-white);
+  font-size: var(--font-size-s);
+  background: none;
+  height: 40px;
+  border-radius: 5px;
+
+  &.default {
+    border: 2px solid var(--color-abn-lightyellow);
+
+    &:hover {
+      border-color: var(--color-abn-darkyellow);
+      color: var(--color-abn-darkyellow);
+    }
+  }
+
+  &.primary {
+    background-color: var(--color-abn-lightyellow);
+    &:hover {
+      background-color: var(--color-abn-darkyellow);
+    }
+  }
+
+  &.secondary {
+    background-color: var(--color-abn-midgreen);
+    &:hover {
+      background-color: var(--color-abn-darkgreen);
+    }
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    cursor: poitner;
+    background-color: darkgrey;
+  }
+}

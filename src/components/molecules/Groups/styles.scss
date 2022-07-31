@@ -1,7 +1,15 @@
 .groups {
-  margin: 0 var(--spacing-3) var(--spacing-5) 0;
+  margin-bottom: var(--spacing-5);
+
+  &--header {
+    margin-bottom: var(--spacing-4);
+  }
 
   &--inner {
+    height: 570px;
+    margin: -100px 0;
+    overflow-x: scroll;
     display: flex;
+    align-items: center;
   }
 }

@@ -5,12 +5,13 @@ export default {
 
   state: {
     groups: {},
+    featured: null,
     error: null,
     fetching: false,
   },
 
   mutations: {
-    SET_SCHEDULE(state, data) {
+    SET_GROUPS(state, data) {
       state.groups = data.reduce((accumulator, current) => {
         const { type } = current._embedded.show
         const formattedType = type.replace(/\s/g, '-').toLowerCase()
@@ -38,6 +39,11 @@ export default {
       }, {})
     },
 
+    SET_FEATURED(state) {
+      const { shows } = state.groups.scripted
+      state.featured = shows[Math.floor(Math.random() * shows.length)]
+    },
+
     SET_FETCHING_STATE(state, boolean) {
       state.fetching = boolean
     },
@@ -55,7 +61,8 @@ export default {
       axios
         .get('/schedule/web?date=2022-07-29&country=')
         .then((res) => {
-          commit('SET_SCHEDULE', res.data)
+          commit('SET_GROUPS', res.data)
+          commit('SET_FEATURED')
           commit('SET_FETCHING_STATE', false)
         })
         .catch(() => {
