@@ -8,9 +8,14 @@ export default {
     featured: null,
     error: null,
     fetching: false,
+    noResults: false,
   },
 
   mutations: {
+    SET_NO_RESULTS(state, result) {
+      state.noResults = result
+    },
+
     SET_GROUPS(state, data) {
       const newThing = data.reduce((accumulator, current) => {
         const show = current.show || current._embedded.show
@@ -41,8 +46,13 @@ export default {
     },
 
     SET_FEATURED(state) {
-      const { shows } = state.groups.scripted
-      state.featured = shows[Math.floor(Math.random() * shows.length)]
+      const keys = Object.keys(state.groups)
+      const randomlySelectedGroup =
+        keys[Math.floor(Math.random() * keys.length)]
+
+      const { shows } = state.groups[randomlySelectedGroup]
+
+      state.featured = shows[0]
     },
 
     SET_FETCHING_STATE(state, boolean) {
@@ -55,15 +65,21 @@ export default {
   },
 
   actions: {
-    SEARCH({ commit }, query) {
+    SEARCH({ commit, rootState }) {
       commit('SET_ERROR_STATE', false)
       commit('SET_FETCHING_STATE', true)
 
       axios
-        .get(`/search/shows?q=${query}`)
+        .get(`/search/shows?q=${rootState.search.query}`)
         .then((res) => {
-          commit('SET_GROUPS', res.data)
-          commit('SET_FEATURED')
+          if (res.data.length) {
+            commit('SET_GROUPS', res.data)
+            commit('SET_FEATURED')
+            commit('SET_NO_RESULTS', false)
+          } else {
+            commit('SET_NO_RESULTS', true)
+          }
+
           commit('SET_FETCHING_STATE', false)
         })
         .catch(() => {
@@ -78,8 +94,14 @@ export default {
       axios
         .get('/schedule/web?date=2022-07-29&country=')
         .then((res) => {
-          commit('SET_GROUPS', res.data)
-          commit('SET_FEATURED')
+          if (res.data.length) {
+            commit('SET_GROUPS', res.data)
+            commit('SET_FEATURED')
+            commit('SET_NO_RESULTS', false)
+          } else {
+            commit('SET_NO_RESULTS', true)
+          }
+
           commit('SET_FETCHING_STATE', false)
         })
         .catch(() => {

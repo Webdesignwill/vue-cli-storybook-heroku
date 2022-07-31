@@ -7,8 +7,15 @@ body, html {
   background-color: var(--color-abn-darkgrey);
   overflow-x: hidden;
   scroll-behavior: smooth;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 * {
   outline: none;
 }
+
+// ::-webkit-scrollbar {
+//   display: none;
+// }
