@@ -1,8 +1,7 @@
 <template>
   <button
     :disabled="disabled"
-    class="button"
-    :class="style"
+    :class="`button ${style}`"
     :type="type"
     @click="$emit('click')"
   >
