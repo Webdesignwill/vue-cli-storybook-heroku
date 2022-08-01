@@ -7,6 +7,10 @@ Upon accepting these changes, the PR can then be approved by the reviewer from C
 
 This change is then deployed to the staging environment for testing.
 
+# Environments
+Storybook [Storybook ABN Movies](https://62e41e8b345ad62f3a746c3f-nzoiyocyvu.chromatic.com/)
+Staging [ABN Movies Staging](https://abn-movies.herokuapp.com/)
+
 # Developing
 To develop with the application, first clone the project and then cd in to the project directory with `cd abn-movies` and then run `yarn` to fetch all the dependencies.
 
