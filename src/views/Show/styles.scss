@@ -1,8 +1,11 @@
 .show-page {
+  &--preview, &--content {
+    height: calc(100vh - var(--header-nav-height));
+  }
+
   &--preview {
     position: absolute;
     width: 100%;
-    height: calc(100vh - var(--header-nav-height));
     overflow: hidden;
 
     &-img {
@@ -23,15 +26,14 @@
   }
 
   &--content {
-    padding: var(--spacing-5);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 0 var(--spacing-5);
+    display: flex;
+    align-items: flex-end;
 
     &-inner {
-      width: 100%;
-      margin: 0 auto;
-
+      position: relative; 
+      bottom: 0;
+      padding-bottom: var(--spacing-5);
       @include media-breakpoint-up(lg) {
         max-width: var(--breakpoint-tablet);
       }

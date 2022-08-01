@@ -11,14 +11,10 @@
     font-family: var(--font-roboto-cond-regular);
     color: var(--color-abn-lightyellow);
     transform: rotate(4deg);
-    display: none;
+    white-space: nowrap;
     position: absolute;
     bottom: -2px;
     left: 24%;
-
-    @include media-breakpoint-up(lg) {
-      display: block;
-    }
   }
 
   &--inner {
