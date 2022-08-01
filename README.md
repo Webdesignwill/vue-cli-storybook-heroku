@@ -47,6 +47,8 @@ Each component should consist of the three files to complete the styles, html, j
 The files for a component include;
 
 /ComponentName
+ - __tests__ /
+   - ComponentName.spec.js
  - index.vue
  - ComponentName.stories.js
  - styles.scss
