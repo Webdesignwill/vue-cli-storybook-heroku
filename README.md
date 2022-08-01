@@ -1,6 +1,11 @@
-# ABN Movies
+# ABN Movies @ The Movies
+This is the repo for the ABN Movies application which is put together using Vue 3 and generated with vue cli's vue create app. 
 
-This is the repo for the ABN Movies application which is put together using Vue 3 and generated with vue cli's vue create app.
+Using Gitflow, when a PR is created, a build is then generated with Chromatic to test each component for changes. If some are detected, then they will require checking by another member of the team.
+
+Upon accepting these changes, the PR can then be approved by the reviewer from Chromatic to Github. Once this happens, the PR can then be merged to main which is then picked up by Heroku.
+
+This change is then deployed to the staging environment for testing.
 
 # Developing
 To develop with the application, first clone the project and then cd in to the project directory with `cd abn-movies` and then run `yarn` to fetch all the dependencies.
@@ -9,7 +14,7 @@ To start creating components, run `yarn serve`  which will then watch for file c
 
 ## Storybook
 
-This application uses [Chromatic](https://www.chromatic.com/) to create a new Storybook build whenever work is pushed to Github. Using a Github action, this then triggers a deployment to Storybook which can then be viewed [Storybook ABN Movies](https://www.chromatic.com/library?appId=62e41e8b345ad62f3a746c3f&branch=main)
+This application uses [Chromatic](https://www.chromatic.com/) to create a new Storybook build whenever work is pushed to Github. Using a Github action, this then triggers a deployment to Storybook which can then be viewed [Storybook ABN Movies](https://62e41e8b345ad62f3a746c3f-nzoiyocyvu.chromatic.com/)
 
 You can test a storybook build by running `yarn build-storybook`
 
@@ -56,4 +61,4 @@ Any child components that this depends on can further be added to a nested folde
 I like to work with the Atomic Design method and so splitting the components up in to Atoms, Molecules, Organisms, Templates & Pages. For more information, see [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
 
 ## Bootstrap
-This application is using the fundementals of the Bootstrap library so that I can leverage some useful mixins from there. 
+This application is using the fundementals of the Bootstrap library so that I can leverage some useful mixins from there.
