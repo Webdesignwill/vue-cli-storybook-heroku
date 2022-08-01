@@ -6,7 +6,7 @@
         <small class="header-nav--strap">@ THE MOVIES</small>
       </router-link>
 
-      <Search class="header-nav--search" />
+      <Search class="header-nav--search" v-show="show" />
     </div>
   </div>
 </template>
@@ -16,6 +16,19 @@ import Logo from '@/components/atoms/Logo'
 import Search from '@/components/atoms/Search'
 
 export default {
+  data() {
+    return {
+      show: false,
+    }
+  },
+  watch: {
+    $route: {
+      deep: true,
+      handler(to) {
+        this.show = to.name === 'show' ? false : true // I know, I know :(
+      },
+    },
+  },
   components: {
     Logo,
     Search,
