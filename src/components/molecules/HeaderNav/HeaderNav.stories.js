@@ -14,7 +14,7 @@ const Template = (args) => ({
   setup() {
     return args
   },
-  template: `<HeaderNav v-bind="args" />`,
+  template: `<HeaderNav />`,
 })
 
 export const Default = Template.bind({})
