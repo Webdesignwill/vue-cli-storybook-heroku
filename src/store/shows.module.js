@@ -17,7 +17,7 @@ export default {
     },
 
     SET_GROUPS(state, data) {
-      const newThing = data.reduce((accumulator, current) => {
+      state.groups = data.reduce((accumulator, current) => {
         const show = current.show || current
 
         const { type } = show
@@ -41,8 +41,6 @@ export default {
           }
         }
       }, {})
-
-      state.groups = newThing
     },
 
     SET_FEATURED(state) {
