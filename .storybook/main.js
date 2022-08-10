@@ -32,7 +32,6 @@ module.exports = {
               @import "~bootstrap/scss/variables";
               @import "~bootstrap/scss/maps";
               @import "~bootstrap/scss/mixins";
-              @import "~@/assets/scss/index.scss";
             `,
           },
         },
