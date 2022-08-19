@@ -10,7 +10,8 @@
       </div>
       <div v-else class="card--no-image">
         <p class="card--no-image-text">{{ show.name }}</p>
-        <ShieldIcon />
+        <small>No preview image available</small>
+        <Logo class="card--no-image-logo" />
       </div>
 
       <div class="card--screen" />
@@ -35,12 +36,12 @@
 
 <script>
 import sanitizeHtml from 'sanitize-html'
-import ShieldIcon from '@/components/atoms/ShieldIcon'
+import Logo from '@/components/atoms/Logo'
 import Genres from '@/components/atoms/Genres'
 
 export default {
   components: {
-    ShieldIcon,
+    Logo,
     Genres,
   },
   props: {

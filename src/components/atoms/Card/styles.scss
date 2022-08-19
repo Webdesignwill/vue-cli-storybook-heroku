@@ -55,6 +55,10 @@
     &-text {
       font-size: var(--font-size-xl);
     }
+
+    &-logo {
+      margin-top: var(--spacing-5);
+    }
   }
 
   &--overlay {
