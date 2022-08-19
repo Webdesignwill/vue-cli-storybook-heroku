@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { createRouter, createWebHistory } from 'vue-router'
 import Featured from '@/components/organisms/Featured'
-import ShieldIcon from '@/components/atoms/ShieldIcon'
+import Logo from '@/components/atoms/Logo'
 import { routes } from '@/router'
 import { show, showNoImage } from '@/mockData'
 
@@ -36,7 +36,7 @@ describe('Featured', () => {
     expect(wrapper.find('.featured--preview-img').exists()).toBe(false)
   })
 
-  test('should show the ShieldIcon component', () => {
+  test('should show the Logo component', () => {
     const wrapper = mount(Featured, {
       global: {
         plugins: [router],
@@ -46,7 +46,7 @@ describe('Featured', () => {
       },
     })
 
-    expect(wrapper.findComponent(ShieldIcon).exists()).toBe(true)
+    expect(wrapper.findComponent(Logo).exists()).toBe(true)
   })
 
   test('should show the correct rating of 5.5', () => {

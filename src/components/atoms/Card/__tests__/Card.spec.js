@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { createRouter, createWebHistory } from 'vue-router'
 import Card from '@/components/atoms/Card'
-import ShieldIcon from '@/components/atoms/ShieldIcon'
+import Logo from '@/components/atoms/Logo'
 import { routes } from '@/router'
 import { show, showNoImage } from '@/mockData'
 
@@ -37,7 +37,7 @@ describe('Card', () => {
     expect(wrapper.find('.card--preview-img').exists()).toBe(false)
   })
 
-  test('should show the ShieldIcon component', () => {
+  test('should show the Logo component', () => {
     const wrapper = mount(Card, {
       global: {
         plugins: [router],
@@ -47,6 +47,6 @@ describe('Card', () => {
       },
     })
 
-    expect(wrapper.findComponent(ShieldIcon).exists()).toBe(true)
+    expect(wrapper.findComponent(Logo).exists()).toBe(true)
   })
 })
