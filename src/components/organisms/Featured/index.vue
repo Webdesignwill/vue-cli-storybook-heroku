@@ -9,7 +9,7 @@
       />
 
       <div v-else class="featured--no-image">
-        <ShieldIcon class="featured--no-image-icon" />
+        <Logo class="featured--no-image-icon" />
       </div>
     </div>
 
@@ -37,7 +37,7 @@
 
 <script>
 import sanitizeHtml from 'sanitize-html'
-import ShieldIcon from '@/components/atoms/ShieldIcon'
+import Logo from '@/components/atoms/Logo'
 import Button from '@/components/atoms/Button'
 import Genres from '@/components/atoms/Genres'
 
@@ -49,7 +49,7 @@ export default {
     },
   },
   components: {
-    ShieldIcon,
+    Logo,
     Button,
     Genres,
   },

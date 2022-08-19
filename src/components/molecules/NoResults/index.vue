@@ -8,16 +8,16 @@
       for?
     </p>
 
-    <Shield class="no-results--shield" />
+    <Logo class="no-results--logo" />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-import Shield from '@/components/atoms/ShieldIcon'
+import Logo from '@/components/atoms/Logo'
 export default {
   components: {
-    Shield,
+    Logo,
   },
   computed: mapState({
     query: (state) => state.search.query,

@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { createStore } from 'vuex'
 import NoResults from '@/components/molecules/NoResults'
-import Shield from '@/components/atoms/ShieldIcon'
+import Logo from '@/components/atoms/Logo'
 
 describe('NoResults', () => {
   let store
@@ -27,7 +27,7 @@ describe('NoResults', () => {
     )
   })
 
-  test('should render Shield component', () => {
-    expect(wrapper.findComponent(Shield).exists()).toBe(true)
+  test('should render Logo component', () => {
+    expect(wrapper.findComponent(Logo).exists()).toBe(true)
   })
 })
