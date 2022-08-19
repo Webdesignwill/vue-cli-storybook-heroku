@@ -14,25 +14,25 @@
   height: 40px;
 
   &.default {
-    border: 2px solid var(--color-abn-lightyellow);
+    border: 2px solid var(--color-app-lightyellow);
 
     &:hover {
-      border-color: var(--color-abn-darkyellow);
-      color: var(--color-abn-darkyellow);
+      border-color: var(--color-app-darkyellow);
+      color: var(--color-app-darkyellow);
     }
   }
 
   &.primary {
-    background-color: var(--color-abn-lightyellow);
+    background-color: var(--color-app-lightyellow);
     &:hover {
-      background-color: var(--color-abn-darkyellow);
+      background-color: var(--color-app-darkyellow);
     }
   }
 
   &.secondary {
-    background-color: var(--color-abn-midgreen);
+    background-color: var(--color-app-midgreen);
     &:hover {
-      background-color: var(--color-abn-darkgreen);
+      background-color: var(--color-app-darkgreen);
     }
   }
 

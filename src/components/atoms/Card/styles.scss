@@ -12,13 +12,13 @@
 
 .card {
   --card-width: 250px;
-  --card-height: calc(var(--card-width) / (2/3));
+  --card-height: calc(var(--card-width) / (2 / 3));
   --grow-factor: 1.5;
 
   cursor: pointer;
   position: relative;
   $self: &;
-  background-color: var(--color-abn-lightgreen);
+  background-color: var(--color-app-lightgreen);
   min-width: var(--card-width);
   width: var(--card-width);
   height: var(--card-height);
@@ -72,7 +72,7 @@
 
     &-language {
       display: block;
-      color: var(--color-abn-lightgreen);
+      color: var(--color-app-lightgreen);
       margin-bottom: var(--spacing-1);
     }
 

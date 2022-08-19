@@ -1,5 +1,7 @@
-# ABN Movies @ The Movies
-This is the repo for the ABN Movies application which is put together using Vue 3 and generated with vue cli's vue create app. 
+# @ The Movies
+This is the repo for an interviews assignment application which is put together using Vue and generated with vue cli's vue create app.
+
+Took around 20 - 26 hours in total to get it neat and tidy.
 
 Using Gitflow, when a PR is created, a build is then generated with Chromatic to test each component for changes. If some are detected, then they will require checking by another member of the team.
 
@@ -7,27 +9,30 @@ Upon accepting these changes, the PR can then be approved by the reviewer from C
 
 This change is then deployed to the staging environment for testing.
 
-# Environments
-Storybook [Storybook ABN Movies](https://62e41e8b345ad62f3a746c3f-nzoiyocyvu.chromatic.com/)
+# API TV Maze
+This uses the Tv Maze API to get some data - https://api.tvmaze.com/
 
-Staging [ABN Movies Staging](https://abn-movies.herokuapp.com/)
+# Environments
+Storybook [Storybook](https://62e41e8b345ad62f3a746c3f-nzoiyocyvu.chromatic.com/)
+
+Staging [Staging](https://vue-cli-storybook-heroku.herokuapp.com/#/)
 
 # Developing
-To develop with the application, first clone the project and then cd in to the project directory with `cd abn-movies` and then run `yarn` to fetch all the dependencies.
+To develop with the application, first clone the project and then cd in to the project directory with `cd vue-cli-storybook-heroku` and then run `yarn` to fetch all the dependencies.
 
 To start creating components, run `yarn serve`  which will then watch for file changes and then using HMR (Hot Module Replacement) to update the browser without having to refresh. 
 
 ## Storybook
 
-This application uses [Chromatic](https://www.chromatic.com/) to create a new Storybook build whenever work is pushed to Github. Using a Github action, this then triggers a deployment to Storybook which can then be viewed [Storybook ABN Movies](https://62e41e8b345ad62f3a746c3f-nzoiyocyvu.chromatic.com/)
+This application uses [Chromatic](https://www.chromatic.com/) to create a new Storybook build whenever work is pushed to Github. Using a Github action, this then triggers a deployment to Storybook which can then be viewed [Storybook](https://62e41e8b345ad62f3a746c3f-nzoiyocyvu.chromatic.com/)
 
 You can test a storybook build by running `yarn build-storybook`
 
 ## Staging - Heroku
 
-The application static pages are built and then deployed as a static folder on a heroku instance. A build is triggered whenever a push to main occurs and then shortly after, the static web pages can be viewed at [ABN Movies Staging](https://abn-movies.herokuapp.com/)
+The application static pages are built and then deployed as a static folder on a heroku instance. A build is triggered whenever a push to main occurs and then shortly after, the static web pages can be viewed at [Staging](https://vue-cli-storybook-heroku.herokuapp.com/#/)
 
-If you need to view the logs and have the Heroku CLI, then you can see them by using the heroku cli command `heroku logs --tail --app abn-movies`
+If you need to view the logs and have the Heroku CLI, then you can see them by using the heroku cli command `heroku logs --tail --app vue-cli-storybook-heroku`
 
 ### Linting
 Linting rules have been set up and so when a commit occurs, the linter with check the files for consistency. 

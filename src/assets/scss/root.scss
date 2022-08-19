@@ -1,7 +1,7 @@
 :root {
   --transition-speed: 0.3s;
   --transition-speed-slow: 0.8s;
-  
+
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
   --spacing-3: 1rem;
@@ -18,25 +18,25 @@
   --font-size-xl: calc(var(--body-font-size) * 1.375);
   --font-size-xxl: calc(var(--body-font-size) * 1.75);
 
-  --font-roboto-bold: 'Roboto-Bold', sans-serif;
-  --font-roboto-italic: 'Roboto-Italic', sans-serif;
-  --font-roboto-light: 'Roboto-Light', sans-serif;
-  --font-roboto-regular: 'Roboto-Regular', sans-serif;
-  --font-roboto-cond-bold: 'RobotoCondensed-Bold', sans-serif;
-  --font-roboto-cond-light: 'RobotoCondensed-Light', sans-serif;
-  --font-roboto-cond-regular: 'RobotoCondensed-Regular', sans-serif;
+  --font-roboto-bold: "Roboto-Bold", sans-serif;
+  --font-roboto-italic: "Roboto-Italic", sans-serif;
+  --font-roboto-light: "Roboto-Light", sans-serif;
+  --font-roboto-regular: "Roboto-Regular", sans-serif;
+  --font-roboto-cond-bold: "RobotoCondensed-Bold", sans-serif;
+  --font-roboto-cond-light: "RobotoCondensed-Light", sans-serif;
+  --font-roboto-cond-regular: "RobotoCondensed-Regular", sans-serif;
 
   --color-black: #000000;
-  --color-white: #FFFFFF;
-  --color-abn-darkgrey: #222222;
-  --color-abn-logo-grey: #868686;
-  --color-abn-grey: #666666;
-  --color-abn-darkgreen: #004D41;
-  --color-rgba-abn-darkgreen: rgba(0,77,64, 0.3);
-  --color-abn-midgreen: #007066;
-  --color-abn-lightgreen: #00AB95;
-  --color-abn-darkyellow: #BD960B;
-  --color-abn-lightyellow: #E5B50A;
+  --color-white: #ffffff;
+  --color-app-darkgrey: #222222;
+  --color-app-logo-grey: #868686;
+  --color-app-grey: #666666;
+  --color-app-darkgreen: #34495e;
+  --color-rgba-app-darkgreen: rgba(0, 77, 64, 0.3);
+  --color-app-midgreen: #007000;
+  --color-app-lightgreen: #41b883;
+  --color-app-darkyellow: #bd8300;
+  --color-app-lightyellow: #e5b50f;
 
   --breakpoint-desktop: 1200px;
   --breakpoint-tablet: 992px;

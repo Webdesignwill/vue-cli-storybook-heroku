@@ -1,6 +1,6 @@
 .featured {
-  background-color: var(--color-rgba-abn-darkgreen);
-  --zindex-screen: 100; 
+  background-color: var(--color-rgba-app-darkgreen);
+  --zindex-screen: 100;
   position: relative;
   margin-bottom: var(--spacing-5);
   flex-direction: column;
@@ -17,7 +17,7 @@
   }
 
   &--preview {
-    background-color: var(--color-abn-lightgreen);
+    background-color: var(--color-app-lightgreen);
     flex-basis: 60%;
 
     &-img {
@@ -43,7 +43,7 @@
 
     &-language {
       display: block;
-      color: var(--color-abn-lightgreen);
+      color: var(--color-app-lightgreen);
       margin-bottom: var(--spacing-3);
     }
 
